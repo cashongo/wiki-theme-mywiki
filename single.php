@@ -18,21 +18,26 @@
               <header>
               <div class="single-page">
                 <div class="meta nopadding">
-                  <time class="sprite date-icon" datetime="<?php echo the_time('M-j-Y'); ?>" pubdate>
-                    <?php the_date(); ?>
-                  </time>
+                  <time class="sprite date-icon" datetime="<?php echo the_modified_time('M-j-Y'); ?>" pubdate>
+                    Last modified: <?php the_modified_date(); ?>
+                  </time><br/>
                   <span class="sprite author-icon">
-                  <?php the_author_posts_link(); ?>
-                  </span> <span class="sprite amp cat-icon-small">
-                  <?php the_category(', '); ?>
-                  </span> <span class="sprite comments-icon-small">
-                  <?php comments_number(); ?>
-                  </span> 
+                  Original author: <?php the_author(); ?>
+                  </span><br/>
+                  <span class="sprite author-icon">
+                  Las modifier: <?php the_modified_author(); ?>
+                  </span><br/>
+                  <span class="sprite amp cat-icon-small">
+                  Wiki category: <?php the_category(', '); ?>
+                  </span>
+                  <!-- <span class="sprite comments-icon-small">
+                    <?php comments_number(); ?>
+                  </span> -->
                 </div>
-               </div> 
+               </div>
               </header>
               <!-- end article header -->
-              
+
               <section class="post_content">
                 <?php the_content(); ?>
                 <?php if(wp_get_attachment_url( get_post_thumbnail_id($post->ID) )!= ''){ ?>
@@ -40,8 +45,8 @@
                 <?php } ?>
                 <?php wp_link_pages(); ?>
               </section>
-              <!-- end article section --> 
-              
+              <!-- end article section -->
+
             </article>
         </header>
       </article>
@@ -49,14 +54,14 @@
       <?php endwhile; ?>
       <?php endif; ?>
        <nav class="mywiki-nav">
-                <span class="mywiki-nav-previous"><?php previous_post_link( '%link', '<span>'.'<< </span> %title' ); ?></span>
-                <span class="mywiki-nav-next"><?php next_post_link( '%link', '%title <span>'.'>> </span>' ); ?></span>
-		</nav>
+                <span class="mywiki-nav-previous"><?php previous_post_link('%link', 'Previous in category', TRUE); ?> </span>
+                <span class="mywiki-nav-next"><?php next_post_link('%link', 'Previous in category', TRUE); ?> </span>
+    </nav>
     </div>
-	<?php comments_template( '', true ); ?>
+  <?php comments_template( '', true ); ?>
   </div>
   <!-- end #main -->
-  
+
   <?php get_sidebar(); // sidebar 1 ?>
 </div>
 <!-- end #content -->
