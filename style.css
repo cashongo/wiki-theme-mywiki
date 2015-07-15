@@ -14,8 +14,8 @@ Text Domain: mywiki
 */
 
 @import url(//fonts.googleapis.com/css?family=Electrolize);
- @import url(//fonts.googleapis.com/css?family=Open+Sans);
- @import url(//fonts.googleapis.com/css?family=Lato);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url(//fonts.googleapis.com/css?family=Lato);
 /****** Main CSS ******/
 
 p {
@@ -717,9 +717,7 @@ ul {
   padding-top: 7px;
   font-size: 14px;
 }
-ul li {
-  list-style: inside none disc;
-}
+
 .load {
   background-image: url(./img/loader.gif);
   background-position: right 180px center;
@@ -1901,4 +1899,12 @@ input[type="submit"] {
 }
 .post_content p iframe{
     width: 100%;
+}
+
+.post_content ul li {
+  list-style: inside none disc;
+}
+
+.post_content ol li {
+  padding-bottom: 1em;
 }
