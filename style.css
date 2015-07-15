@@ -705,10 +705,6 @@ header .navbar .container {
   background: url("./img/que-icn.png") no-repeat scroll 0 7px rgba(0, 0, 0, 0);
   padding-left: 31px;
 }
-ul {
-  padding: 0 0 1em;
-  margin: 0;
-}
 .sidebar ul {
   font-size: 13px !important;
   padding: 0;
