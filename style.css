@@ -1899,6 +1899,9 @@ input[type="submit"] {
 .post_content ol li {
   padding-bottom: 1em;
 }
+.post_content ol li ul {
+  padding-bottom: 1em;
+}
 .post_content ul li {
   list-style: inside none disc;
   padding-bottom: 0em;
