@@ -1896,11 +1896,10 @@ input[type="submit"] {
 .post_content p iframe{
     width: 100%;
 }
-
-.post_content ul li {
-  list-style: inside none disc;
-}
-
 .post_content ol li {
   padding-bottom: 1em;
+}
+.post_content ul li {
+  list-style: inside none disc;
+  padding-bottom: 0em;
 }
