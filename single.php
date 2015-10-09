@@ -8,9 +8,9 @@
         <header>
             <header>
               <div class="page-catheader cat-catheader">
-                <h4 class="cat-title">
+                <h1 class="cat-title">
                   <?php the_title(); ?>
-                </h4>
+                </h1>
               </div>
             </header>
             <?php if (function_exists('mywiki_custom_breadcrumbs')) mywiki_custom_breadcrumbs(); ?>
@@ -19,13 +19,12 @@
               <div class="single-page">
                 <div class="meta nopadding">
                   <time class="sprite date-icon" datetime="<?php echo the_modified_time('M-j-Y'); ?>" pubdate>
-                    Last modified: <?php the_modified_date(); ?>
+                    Initial version: <?php the_date(); ?><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modified: <?php the_modified_date(); ?>
                   </time><br/>
                   <span class="sprite author-icon">
-                  Original author: <?php the_author(); ?>
-                  </span><br/>
-                  <span class="sprite author-icon">
-                  Las modifier: <?php the_modified_author(); ?>
+                  Original author: <?php the_author(); ?><br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last modifier: <?php the_modified_author(); ?>
                   </span><br/>
                   <span class="sprite amp cat-icon-small">
                   Wiki category: <?php the_category(', '); ?>
@@ -37,6 +36,11 @@
                </div>
               </header>
               <!-- end article header -->
+
+	      <section class="notice_box_top">
+                 <?php if(get_field('notice_box_top')) { the_field('notice_box_top'); } ?>
+              </section>
+              <!-- end notice box top section -->
 
               <section class="post_content">
                 <?php the_content(); ?>
