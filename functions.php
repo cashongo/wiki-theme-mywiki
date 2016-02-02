@@ -346,7 +346,7 @@ function mywiki_custom_breadcrumbs() {
     if ( is_category() ) {
       $mywiki_thisCat = get_category(get_query_var('cat'), false);
       if ($mywiki_thisCat->parent != 0) echo get_category_parents($mywiki_thisCat->parent, TRUE, ' ' . $mywiki_delimiter . ' ');
-      echo $mywiki_before . _e('Archive by category ','mywiki').' : '.single_cat_title('', false).$mywiki_after;
+      echo $mywiki_before . _e('List of articles in category ','mywiki').' "'.single_cat_title('', false).'"'.$mywiki_after;
   
     } elseif ( is_search() ) {
       echo $mywiki_before . _e('Search results for ','mywiki') . get_search_query() . '"' . $mywiki_after;

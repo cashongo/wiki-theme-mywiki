@@ -9,7 +9,7 @@
             <header>
               <div class="page-catheader cat-catheader">
                 <h1 class="cat-title">
-                  <?php the_title(); ?>
+                  <?php the_category(', '); ?>: <?php the_title(); ?>
                 </h1>
               </div>
             </header>
@@ -38,11 +38,26 @@
               <!-- end article header -->
 
 	      <section class="notice_box_top">
-                 <?php if(get_field('notice_box_top')) { the_field('notice_box_top'); } ?>
+                <?php if(get_field('notice_box_top')) { the_field('notice_box_top'); } ?>
               </section>
               <!-- end notice box top section -->
 
               <section class="post_content">
+                <?php if( get_field('scope_of_feature') ): ?>
+                  <h2>Scope of Feature: <?php the_field('scope_of_feature'); ?></h2>
+                <?php endif; ?>
+                <?php if( get_field('owner') ): ?>
+                  <h3>Author / Owner: <?php the_field('owner'); ?></h3>
+                <?php endif; ?>
+                <?php if( get_field('feature_description') ): ?>
+                  <h2>Feature Description</h2>
+                  <div><?php the_field('feature_description'); ?></div>
+                <?php endif; ?>
+                <?php if( get_field('list_of_related_resources') ): ?>
+                  <h2>List of Related Resources</h2>
+                  <div><?php the_field('list_of_related_resources'); ?></div>
+                <?php endif; ?>
+
                 <?php the_content(); ?>
                 <?php if(wp_get_attachment_url( get_post_thumbnail_id($post->ID) )!= ''){ ?>
                 <figure class="single_cat_image"> <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" /> </figure>

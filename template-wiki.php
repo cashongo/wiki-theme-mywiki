@@ -21,7 +21,7 @@ get_header();
       'hide_empty'               => 0,
       'hierarchical'             => 1,
       'include'                  => '',
-      'exclude'                  => '',
+      'exclude'                  => '22',
       'number'                   => '',
       'taxonomy'                 => 'category',
       'pad_counts'               => false
