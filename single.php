@@ -46,13 +46,56 @@
                 <?php if( get_field('scope_of_feature') ): ?>
                   <h2>Scope of Feature: <?php the_field('scope_of_feature'); ?></h2>
                 <?php endif; ?>
+
                 <?php if( get_field('owner') ): ?>
                   <h3>Author / Owner: <?php the_field('owner'); ?></h3>
                 <?php endif; ?>
+
+                <?php if( get_field('why') ): ?>
+                  <h2>Why was it implemented?</h2>
+                  <div><?php the_field('why'); ?></div>
+                <?php endif; ?>
+
+                <?php if( get_field('what_do') ): ?>
+                  <h2>What does it do?</h2>
+                  <div><?php the_field('what_do'); ?></div>
+                <?php endif; ?>
+
+                <?php if( get_field('where') ): ?>
+                  <h2>Where does it live?</h2>
+                  <div><?php the_field('where'); ?></div>
+                <?php endif; ?>
+
+                <?php if( get_field('use_other') ): ?>
+                  <h2>What other systems is it using?</h2>
+                  <div><?php the_field('use_other'); ?></div>
+                <?php endif; ?>
+
+                <?php if( get_field('used_by_other') ): ?>
+                  <h2>What other systems are using it?</h2>
+                  <div><?php the_field('used_by_other'); ?></div>
+                <?php endif; ?>
+
+                <?php if( get_field('when') ): ?>
+                  <h2>When is it running?</h2>
+                  <div><?php the_field('when'); ?></div>
+                <?php endif; ?>
+
+                <?php if( get_field('customer_flow_position') ): ?>
+                  <h2>Where in the customer flow is it running?</h2>
+                  <div><?php the_field('customer_flow_position'); ?></div>
+                <?php endif; ?>
+
+                <?php if( get_field('external_service_dependencies') ): ?>
+                  <h2>What are its external service dependencies?</h2>
+                  <div><?php the_field('external_service_dependencies'); ?></div>
+                <?php endif; ?>
+
                 <?php if( get_field('feature_description') ): ?>
-                  <h2>Feature Description</h2>
+                  <h2>Any other information</h2>
                   <div><?php the_field('feature_description'); ?></div>
                 <?php endif; ?>
+
                 <?php if( get_field('list_of_related_resources') ): ?>
                   <h2>List of Related Resources</h2>
                   <div><?php the_field('list_of_related_resources'); ?></div>
