@@ -43,6 +43,38 @@
               <!-- end notice box top section -->
 
               <section class="post_content">
+                <?php if( get_field('name_of_policy') ): ?>
+                  <p>This document presents the "<?php the_field('name_of_policy'); ?>" of Cash on Go Ltd. All employees are obligated to read the document and act accordingly. 
+                  <?php if( get_field('contact_department_or_contact_role') ): ?>In case you have questions about the policy, please turn to: <?php the_field('contact_department_or_contact_role'); ?>
+                  <?php endif; ?>
+                  </p>
+                <?php endif; ?>
+
+                <?php if( get_field('policy_file') ): ?>
+                  <p style="font-size:2em;font-weight:800;">
+                    <a href="<?php the_field('policy_file'); ?>" target="_blank">
+                      Download and read "
+                      <?php if( get_field('name_of_policy') ): the_field('name_of_policy'); endif; ?>"
+                    </a>
+                  </p>
+                <?php endif; ?>
+
+                <?php if( get_field('signature') ): ?>
+                  <p>
+                    Please sign the document in the box below. If the Google Form is not displayed, make sure you are logged in with your company Google Apps account.<br/>
+                  </p>
+                    <?php the_field('signature'); ?>
+                <?php endif; ?>
+
+
+                <?php if( get_field('scope_of_feature') ): ?>
+                  <h2>Scope of Feature: <?php the_field('scope_of_feature'); ?></h2>
+                <?php endif; ?>
+
+                <?php if( get_field('scope_of_feature') ): ?>
+                  <h2>Scope of Feature: <?php the_field('scope_of_feature'); ?></h2>
+                <?php endif; ?>
+
                 <?php if( get_field('scope_of_feature') ): ?>
                   <h2>Scope of Feature: <?php the_field('scope_of_feature'); ?></h2>
                 <?php endif; ?>
